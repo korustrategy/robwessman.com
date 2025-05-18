@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #008080;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#desktop {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 40px;
+  z-index: 1;
+}
+
+.icon {
+  width: 80px;
+  margin: 20px 0 0 20px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.icon span {
+  display: block;
+  margin-top: 4px;
+  color: white;
+  text-shadow: 1px 1px 0 #000;
+  font-size: 13px;
+}
+
+#taskbar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 40px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+#start-btn {
+  margin-left: 8px;
+  background: #c0c0c0;
+  border: 2px outset #fff;
+  font-family: inherit;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 12px;
+  cursor: pointer;
+}
+
+#start-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+#clock {
+  margin-left: auto;
+  margin-right: 16px;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+  font-size: 15px;
+  color: #222;
+}
+
+.window {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 350px;
+  background: #fff;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #888;
+  z-index: 100;
+}
+
+.window-titlebar {
+  background: #000080;
+  color: #fff;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.window-content {
+  height: 100%;
+  padding: 0;
+}
+
+.window-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.close-btn {
+  background: #c0c0c0;
+  border: 1px solid #888;
+  color: #000;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#start-menu {
+  display: none;
+  position: fixed;
+  left: 8px;
+  bottom: 48px;
+  width: 220px;
+  background: #c0c0c0;
+  border: 2px outset #fff;
+  box-shadow: 2px 2px 0 #888;
+  z-index: 1000;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+}
+
+#start-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+
+#start-menu li {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #000;
+}
+
+#start-menu li:hover {
+  background: #000080;
+  color: #fff;
+}
+
+#start-menu li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.window-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.window-controls button {
+  background: #c0c0c0;
+  border: 1px solid #888;
+  color: #000;
+  font-size: 15px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2px;
+}
+
+.window.maximized {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: calc(100vh - 40px) !important;
+  box-sizing: border-box;
+}
+
+.window.minimized {
+  display: none !important;
+}
+
+#taskbar-windows {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.taskbar-btn {
+  background: #e0e0e0;
+  color: #000;
+  border: 2px outset #fff;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 2px 12px;
+  cursor: pointer;
+  min-width: 80px;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: background 0.1s, color 0.1s, border 0.1s;
+}
+
+.taskbar-btn.active,
+.taskbar-btn:active {
+  background: #000080;
+  color: #fff;
+  border: 2px inset #fff;
+}
+
+#minesweeper-game table td {
+  user-select: none;
+  font-size: 16px;
+}
+
+.resize-handle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  z-index: 10;
+  background: transparent;
+}
+
+.resize-handle.se::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="16" x2="16" y2="0" stroke="gray" stroke-width="2"/></svg>') no-repeat center center;
+  opacity: 0.5;
+}

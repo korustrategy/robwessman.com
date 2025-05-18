@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>robwessman.com</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="desktop">
+    <div class="icon" data-window="about">
+      <img src="assets/icons/My Computer.ico" alt="My Computer">
+      <span>About Me</span>
+    </div>
+    <div class="icon" data-window="projects">
+      <img src="assets/icons/Network Neighborhood (48x48px).ico" alt="Network Neighborhood">
+      <span>Projects</span>
+    </div>
+    <div class="icon" data-window="contact">
+      <img src="assets/icons/Mail.ico" alt="Inbox">
+      <span>Contact</span>
+    </div>
+    <div class="icon" data-window="blog">
+      <img src="assets/icons/Book.ico" alt="Book">
+      <span>Blog</span>
+    </div>
+    <div class="icon" data-window="links">
+      <img src="assets/icons/Mouse LMB.ico" alt="Mouse Left Button">
+      <span>Links</span>
+    </div>
+    <div class="icon" data-window="cv">
+      <img src="assets/icons/Briefcase.ico" alt="My Briefcase">
+      <span>CV</span>
+    </div>
+    <div class="icon" data-window="minesweeper">
+  <img src="assets/icons/Microsoft with Ball.ico" alt="Minesweeper">
+  <span>Minesweeper</span>
+</div>
+  </div>
+
+  <div id="taskbar">
+    <button id="start-btn">
+      <img src="assets/icons/Windows 95 logo.ico" alt="Start"> robwessman.com
+    </button>
+    <div id="taskbar-windows"></div>
+    <div id="clock"></div>
+  </div>
+  <!-- Start Menu -->
+<div id="start-menu">
+  <ul>
+    <li data-window="about"><img src="assets/icons/My Computer.ico" alt=""> About Me</li>
+    <li data-window="projects"><img src="assets/icons/Network Neighborhood (48x48px).ico" alt=""> Projects</li>
+    <li data-window="contact"><img src="assets/icons/Mail.ico" alt=""> Contact</li>
+    <li data-window="blog"><img src="assets/icons/Recycle Bin with paper.ico" alt=""> Blog</li>
+    <li data-window="links"><img src="assets/icons/MSN.ico" alt=""> Links</li>
+    <li data-window="cv"><img src="assets/icons/Briefcase.ico" alt=""> CV</li>
+    <li data-window="minesweeper"><img src="assets/icons/Microsoft with Ball.ico" alt=""> Minesweeper</li>
+  </ul>
+</div>
+
+  <!-- About Me window (replicate as needed) -->
+  <div class="window" id="window-about">
+    <div class="window-titlebar">
+      <span>About Me</span>
+    <div class="window-controls">
+      <button class="min-btn" title="Minimize">_</button>
+      <button class="max-btn" title="Maximize">&#9723;</button>
+    <button class="close-btn" title="Close">&times;</button>
+  </div>
+</div>
+    <div class="window-content">
+      <iframe src="about.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="resize-handle se"></div>
+  </div>
+
+  <!-- Projects window (add more as needed) -->
+  <div class="window" id="window-projects">
+    <div class="window-titlebar">
+      <span>Projects</span>
+    <div class="window-controls">
+      <button class="min-btn" title="Minimize">_</button>
+      <button class="max-btn" title="Maximize">&#9723;</button>
+    <button class="close-btn" title="Close">&times;</button>
+  </div>
+</div>
+    <div class="window-content">
+      <iframe src="projects.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="resize-handle se"></div>
+  </div>
+
+  <!-- Contact window (add more as needed) -->
+  <div class="window" id="window-contact">
+    <div class="window-titlebar">
+      <span>Contact</span>
+    <div class="window-controls">
+      <button class="min-btn" title="Minimize">_</button>
+      <button class="max-btn" title="Maximize">&#9723;</button>
+    <button class="close-btn" title="Close">&times;</button>
+  </div>
+</div>
+    <div class="window-content">
+      <iframe src="contact.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="resize-handle se"></div>
+  </div>
+
+  <!-- Blog window (add more as needed) -->
+  <div class="window" id="window-blog">
+    <div class="window-titlebar">
+      <span>Blog</span>
+    <div class="window-controls">
+      <button class="min-btn" title="Minimize">_</button>
+      <button class="max-btn" title="Maximize">&#9723;</button>
+    <button class="close-btn" title="Close">&times;</button>
+  </div>
+</div>
+    <div class="window-content">
+      <iframe src="blog.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="resize-handle se"></div>
+  </div>
+
+  <!-- Links window (add more as needed) -->
+  <div class="window" id="window-links">
+    <div class="window-titlebar">
+      <span>Links</span>
+    <div class="window-controls">
+      <button class="min-btn" title="Minimize">_</button>
+      <button class="max-btn" title="Maximize">&#9723;</button>
+    <button class="close-btn" title="Close">&times;</button>
+  </div>
+</div>
+    <div class="window-content">
+      <iframe src="links.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="resize-handle se"></div>
+  </div>
+
+  <!-- CV window (add more as needed) -->
+  <div class="window" id="window-cv">
+    <div class="window-titlebar">
+      <span>CV</span>
+    <div class="window-controls">
+      <button class="min-btn" title="Minimize">_</button>
+      <button class="max-btn" title="Maximize">&#9723;</button>
+    <button class="close-btn" title="Close">&times;</button>
+  </div>
+</div>
+    <div class="window-content">
+      <iframe src="cv.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="resize-handle se"></div>
+  </div>
+
+<!-- Minesweeper Window -->
+<div class="window" id="window-minesweeper">
+  <div class="window-titlebar">
+    <span>Minesweeper</span>
+    <div class="window-controls">
+      <button class="min-btn" title="Minimize">_</button>
+      <button class="max-btn" title="Maximize">&#9723;</button>
+      <button class="close-btn" title="Close">&times;</button>
+    </div>
+  </div>
+  <div class="window-content">
+    <div id="minesweeper-game"></div>
+  </div>
+  <div class="resize-handle se"></div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
